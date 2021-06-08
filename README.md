@@ -1,5 +1,5 @@
 ## Clinic Management System
-### Nama: Muhammad Rifat Bagus Adikusma
+### Nama: Muhammad Rifat Bagus Adikusuma
 ### NIM : 20/456371/TK/50501
 
 <hr>
