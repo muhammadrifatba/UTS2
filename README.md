@@ -8,7 +8,7 @@
 Aplikasi ini adalah sebuah aplikasi management system pada sebuah klinik yang berjalan pada perangkat (PC). Pengguna dapat melakukan pencatatan pasien, mengatur perjanjian pemeriksaan, dan mengatur treatmen/perawatan yang dilakukan pada pasien. 
 Aplikasi ini dapat digunakan oleh Admin/Pegawai rumah sakit yang bertanggung jawab.
 
-### Petunjuk Penggunaan
+### Tutorial Aplikasi
 
 Buka video tutorial pada laman berikut: https://youtu.be/LKc9FaY7rUM 
 
