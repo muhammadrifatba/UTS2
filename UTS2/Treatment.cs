@@ -48,12 +48,43 @@ namespace UTS2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Pasien Pat = new Pasien();
+            if (key == 0)
+            {
+                MessageBox.Show("Select the Treatment");
+            }
+            else
+            {
+                try
+                {
 
+                    string query = "Update TreatmentTab set TreatName='" + TreatmentNameTab.Text + "',TreatDesc='" + TreatmentDesc.Text + "',TreatCost='" + TreatmentCostTab.Text + "'where Treatid=" + key + "";
+
+                    Pat.DeletePatient(query);
+                    MessageBox.Show("Treatment Sucesfully Updated");
+                    populate();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
 
         private void TreatmentDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            TreatmentNameTab.Text = TreatmentDGV.SelectedRows[0].Cells[1].Value.ToString();
+            TreatmentDesc.Text = TreatmentDGV.SelectedRows[0].Cells[2].Value.ToString();
+            TreatmentCostTab.Text = TreatmentDGV.SelectedRows[0].Cells[3].Value.ToString();
+         
+            if (TreatmentNameTab.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(TreatmentDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -80,6 +111,54 @@ namespace UTS2
         private void label3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Prescription Presc = new Prescription();
+            Presc.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Pasien Pat = new Pasien();
+            if (key == 0)
+            {
+                MessageBox.Show("Select the Treatment");
+            }
+            else
+            {
+                try
+                {
+
+                    string query = "Delete from TreatmentTab where Treatid=" + key + "";
+                    Pat.DeletePatient(query);
+                    MessageBox.Show("Treatment Sucesfully Deleted");
+                    populate();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
     }
 }

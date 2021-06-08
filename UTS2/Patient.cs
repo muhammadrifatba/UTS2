@@ -137,5 +137,24 @@ namespace UTS2
         {
             Application.Exit();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Prescription Presc = new Prescription();
+            Presc.Show();
+            this.Hide();
+        }
     }
 }

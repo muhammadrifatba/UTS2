@@ -143,5 +143,17 @@ namespace UTS2
             Treat.Show();
             this.Hide();
         }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Prescription Presc = new Prescription();
+            Presc.Show();
+            this.Hide();
+        }
     }
 }
